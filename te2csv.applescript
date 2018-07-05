@@ -15,8 +15,6 @@ tell application "Finder"
 	set listResult to choose from list groupNames with title "Groups" with prompt "Please pick group(s) to export." multiple selections allowed yes empty selection allowed no
 	set folderResult to choose folder with prompt "Please choose the folder into which to write the exported groups, or make one using the New Folder button."
 end tell
-set lineCmdFolder to POSIX path of ((path to me as text) & "::")
-set lineCmd to "python " & lineCmdFolder & "te2csv_encoder.py"
 
 tell application "TextExpander"
 	repeat with aListResult in listResult
@@ -32,7 +30,6 @@ tell application "TextExpander"
 				try
 					set thisLine to quoted form of (name as string) & "," & quoted form of (abbreviation as string) & "," & quoted form of (plain text expansion as string)
 					
-					-- do shell script lineCmd & quoted form of (name as string) & abbreviation & "\" " & " \"" & plain text expansion & "\" "
 				on error errMessage number errNumber
 					set thisLine to "# Error" & errMessage & "for " & name & "/" & abbreviation & " / " & plain text expansion
 				end try

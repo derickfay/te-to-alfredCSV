@@ -30,7 +30,9 @@ tell application "TextExpander"
 		repeat with aSnippet in snippets of aGroup
 			tell aSnippet
 				try
-					set thisLine to do shell script lineCmd & " \"" & name & " \"" & abbreviation & "\" " & " \"" & plain text expansion & "\" "
+					set thisLine to quoted form of (name as string) & "," & quoted form of (abbreviation as string) & "," & quoted form of (plain text expansion as string)
+					
+					-- do shell script lineCmd & quoted form of (name as string) & abbreviation & "\" " & " \"" & plain text expansion & "\" "
 				on error errMessage number errNumber
 					set thisLine to "# Error" & errMessage & "for " & name & "/" & abbreviation & " / " & plain text expansion
 				end try

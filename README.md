@@ -6,7 +6,6 @@ Takes your macOS TextExpander snippets and converts them to CSV for [Import to A
 
 #### Prerequisites 
 
-On your Mac you need Python 2 installed in `usr/bin/python`. (If it is elsewhere change the path in `te2csv.scpt` and save a new `te2csv.app`.)
+run `te2csv.applescript`, select the groups to export and save the CSVs to a folder.
 
-Then run `te2csv.app` (application of the applescript `te2csv.scpt`), select the groups to export and save the CSVs to a folder.
-
+(removed python dependency)

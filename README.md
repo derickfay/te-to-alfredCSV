@@ -1,6 +1,6 @@
-# te2ahk
+# TextExpander to CSV for Alfred import
 
-This tool chain takes your macOS TextExpander snippets and converts them to CSV for [Import to Alfred](https://github.com/derickfay/import-alfred-snippets)
+Takes your macOS TextExpander snippets and converts them to CSV for [Import to Alfred](https://github.com/derickfay/import-alfred-snippets)
 
 ### converting TextExpander snippets to CSV files
 
